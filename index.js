@@ -27,13 +27,14 @@ const typeDefs = gql`
         nome: String
         ativo: Boolean
         id: ID
+        tecnologias: [String!]!
     }
 `;
 
 const resolvers = {
     Query: {
         idade(){
-            return "18";
+            return 18;
         },
         salario(){
             return 11234.45;
@@ -46,6 +47,9 @@ const resolvers = {
         },
         id(){
             return 12345;
+        },
+        tecnologias(){
+            return ['CSS', 'GraphQL', 'ReactJS'];
         }
     }
 };
